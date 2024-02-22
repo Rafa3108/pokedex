@@ -1,0 +1,4 @@
+Configurar o Git Local:
+git config --global user.name Rafa3108 
+git config --global user.email gigliottirafaella@gmail.com 
+
