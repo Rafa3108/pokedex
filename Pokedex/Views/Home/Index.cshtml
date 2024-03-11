@@ -37,8 +37,7 @@
                 @foreach (var pokemon in Model)
             {
             <!-- Card Pokemon - Inicio -->
-            <div class="col">
-
+            <div class="col" onclick="window.location = '/Home/Details/@pokemon.Numero'">
                 <div class="card shadow-sm cursor-pointer @string.Join(' ', pokemon.Tipo)">
                     <img src="@pokemon.Imagem" class="card-img-top" width="100%" height="320" alt="@pokemon.Nome" />
                     <div class="card-body">
