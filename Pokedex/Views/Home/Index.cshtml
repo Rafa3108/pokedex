@@ -16,13 +16,15 @@
         <div class="col mx-auto">
             <h1>Pokédex</h1>
             <div class="group">
-                <button id="btn-all" class="btn btn-md my-2 text-white bg-dark btn-filter">
+                <button id="btn-all" class="btn btn-md my-2 text-white bg-dark btn-filter"
+                onclick="filter('all')">
                     VerTodos
                     </button>
                     @foreach (var tipo in tipos)
                     {
-                        <button id="btn-aço" class="btn btn-sm my-2 text-white btn-filter"
-                        style="background-color:@tipo.Cor">@tipo.Nome
+                        <button id="btn-@tipo.Nome" class="btn btn-sm my-2 text-white btn-filter"
+                        style="background-color:@tipo.Cor" onclick="filter('@tipo.Nome')">
+                        @tipo.Nome
                         </button>
                     }
             </div>
@@ -48,7 +50,8 @@
                                 @foreach (var tipo in pokemon.Tipo)
                                 {
                                 <a href="#" class="btn my-2 text-white"
-                                 style="background-color:@Cor(tipo)">@tipo</a>
+                                 style="background-color:@Cor(tipo)"
+                                 onclick="filter('@tipo')">@tipo</a>
                                 
                                 }
                             </div>
@@ -59,7 +62,7 @@
             <!-- Card Pokemon - Fim -->
             }
 
-            <div id="zeroPokemon" class="col-lg-12 text-center" hidden>
+            <div id="zeroPokemon" class="col-lg-12 text-center d-none">
                 <h1 class="my-3 text-danger">Nenhum Pokemon Encontrado</h1>
             </div>
         </div>

@@ -2,7 +2,11 @@ namespace Pokedex.Models;
 
 public class Pokemon 
 {
-       public int Numero { get; set; }
+    public Pokemon()
+    {
+    }
+
+    public int Numero { get; set; }
        public string Nome  { get; set; }
        public string Descricao { get; set; }
        public string Especie { get; set; }
